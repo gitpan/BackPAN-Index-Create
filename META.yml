@@ -21,10 +21,10 @@ requires:
   Path::Iterator::Rule: '0'
   Scalar::Util: '0'
   autodie: '0'
-  perl: '5.016'
+  perl: '5.010'
   strict: '0'
   warnings: '0'
 resources:
   homepage: https://github.com/neilbowers/BackPAN-Index-Create
   repository: https://github.com/neilbowers/BackPAN-Index-Create.git
-version: '0.01'
+version: '0.02'
