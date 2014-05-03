@@ -9,3 +9,14 @@ bin/create-backpan-index
 dist.ini
 lib/BackPAN/Index/Create.pm
 t/01-require.t
+t/02-full-index.t
+t/03-releases-index.t
+t/expected-full-index.txt
+t/expected-releases-index.txt
+t/lib/BackPAN/Index/Create/TestUtils.pm
+t/testpan/authors/id/P/PO/POGLE/Wood-Pogle-0.001.meta
+t/testpan/authors/id/P/PO/POGLE/Wood-Pogle-0.001.readme
+t/testpan/authors/id/P/PO/POGLE/Wood-Pogle-0.001.tar.gz
+t/testpan/authors/id/Z/ZA/ZAPHOD/Heart-Of-Gold-0.01.meta
+t/testpan/authors/id/Z/ZA/ZAPHOD/Heart-Of-Gold-0.01.readme
+t/testpan/authors/id/Z/ZA/ZAPHOD/Heart-Of-Gold-0.01.tar.gz
