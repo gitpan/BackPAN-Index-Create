@@ -1,5 +1,5 @@
 package BackPAN::Index::Create;
-$BackPAN::Index::Create::VERSION = '0.03';
+$BackPAN::Index::Create::VERSION = '0.04';
 use 5.006;
 use strict;
 use warnings;
