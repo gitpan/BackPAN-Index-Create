@@ -1,5 +1,5 @@
 package BackPAN::Index::Create;
-$BackPAN::Index::Create::VERSION = '0.05';
+$BackPAN::Index::Create::VERSION = '0.06';
 use 5.006;
 use strict;
 use warnings;
@@ -57,7 +57,7 @@ sub create_backpan_index
 
     foreach my $path ($rule->all($author_dir)) {
         my $tail = $path;
-           $tail =~ s!^${stem}[^A-Za-z0-9]+!!;
+           $tail =~ s!^\Q${stem}\E[^A-Za-z0-9]+!!;
            $tail =~ s!\\!/!g if $^O eq 'MSWin32';
         my @stat = stat($path);
         my $time = $stat[9];
