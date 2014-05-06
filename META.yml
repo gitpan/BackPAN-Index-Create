@@ -35,4 +35,4 @@ requires:
 resources:
   homepage: https://github.com/neilbowers/BackPAN-Index-Create
   repository: https://github.com/neilbowers/BackPAN-Index-Create.git
-version: '0.06'
+version: '0.07'
