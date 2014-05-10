@@ -27,7 +27,8 @@ requires:
   Exporter::Lite: '0'
   File::Spec::Functions: '0'
   Getopt::Long: '0'
-  Mojo::Loader: '0'
+  Module::Find: '0'
+  Module::Runtime: '0'
   Moo: '0'
   Path::Iterator::Rule: '0'
   Scalar::Util: '0'
@@ -38,4 +39,4 @@ requires:
 resources:
   homepage: https://github.com/neilbowers/BackPAN-Index-Create
   repository: https://github.com/neilbowers/BackPAN-Index-Create.git
-version: '0.08'
+version: '0.09'
