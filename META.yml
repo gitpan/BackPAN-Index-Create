@@ -25,7 +25,6 @@ requires:
   CPAN::DistnameInfo: '0'
   Carp: '0'
   Exporter::Lite: '0'
-  File::Spec::Functions: '0'
   Getopt::Long: '0'
   Module::Find: '0'
   Module::Runtime: '0'
@@ -39,4 +38,4 @@ requires:
 resources:
   homepage: https://github.com/neilbowers/BackPAN-Index-Create
   repository: https://github.com/neilbowers/BackPAN-Index-Create.git
-version: '0.09'
+version: '0.10'

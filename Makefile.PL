@@ -26,7 +26,6 @@ my %WriteMakefileArgs = (
     "CPAN::DistnameInfo" => 0,
     "Carp" => 0,
     "Exporter::Lite" => 0,
-    "File::Spec::Functions" => 0,
     "Getopt::Long" => 0,
     "Module::Find" => 0,
     "Module::Runtime" => 0,
@@ -45,7 +44,7 @@ my %WriteMakefileArgs = (
     "lib" => 0,
     "parent" => 0
   },
-  "VERSION" => "0.09",
+  "VERSION" => "0.10",
   "test" => {
     "TESTS" => "t/*.t"
   }
@@ -58,7 +57,6 @@ my %FallbackPrereqs = (
   "Exporter" => 0,
   "Exporter::Lite" => 0,
   "File::Compare" => 0,
-  "File::Spec::Functions" => 0,
   "File::Touch" => 0,
   "Getopt::Long" => 0,
   "Module::Find" => 0,
