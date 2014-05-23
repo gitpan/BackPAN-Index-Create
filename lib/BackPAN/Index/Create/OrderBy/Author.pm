@@ -1,5 +1,5 @@
 package BackPAN::Index::Create::OrderBy::Author;
-$BackPAN::Index::Create::OrderBy::Author::VERSION = '0.10';
+$BackPAN::Index::Create::OrderBy::Author::VERSION = '0.11';
 use Moo;
 use CPAN::DistnameInfo;
 
