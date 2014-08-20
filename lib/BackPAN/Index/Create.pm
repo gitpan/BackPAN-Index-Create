@@ -1,5 +1,5 @@
 package BackPAN::Index::Create;
-$BackPAN::Index::Create::VERSION = '0.11';
+$BackPAN::Index::Create::VERSION = '0.12';
 use 5.006;
 use strict;
 use warnings;
@@ -78,6 +78,8 @@ sub create_backpan_index
     }
 
     foreach my $path ($rule->all($author_dir)) {
+        next if $path =~ /\s+\z/;
+        next if $path =~ /\n/;
         my $tail = $path;
            $tail =~ s!^\Q${stem}\E[^A-Za-z0-9]+!!;
            $tail =~ s!\\!/!g if $^O eq 'MSWin32';
@@ -193,7 +195,7 @@ a deterministic result for a specific BackPAN.
 
 The supported sort orders are defined by plugins in the
 C<BackPAN::Index::Create::OrderBy> namespace. 
-C<Dist.pm>, C<Author.pm>, and <Age.pm> are included in the base distribution.
+C<Dist.pm>, C<Author.pm>, and C<Age.pm> are included in the base distribution.
 If you have installed additional plugins, they'll be automatically available.
 
 Note: CPAN::DistnameInfo doesn't handle paths for files other than
