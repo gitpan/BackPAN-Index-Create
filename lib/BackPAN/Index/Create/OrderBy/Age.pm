@@ -1,5 +1,5 @@
 package BackPAN::Index::Create::OrderBy::Age;
-$BackPAN::Index::Create::OrderBy::Age::VERSION = '0.12';
+$BackPAN::Index::Create::OrderBy::Age::VERSION = '0.13';
 use Moo;
 use CPAN::DistnameInfo;
 

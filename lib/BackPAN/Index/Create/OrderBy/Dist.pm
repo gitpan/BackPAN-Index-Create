@@ -1,5 +1,5 @@
 package BackPAN::Index::Create::OrderBy::Dist;
-$BackPAN::Index::Create::OrderBy::Dist::VERSION = '0.12';
+$BackPAN::Index::Create::OrderBy::Dist::VERSION = '0.13';
 use Moo;
 use CPAN::DistnameInfo;
 

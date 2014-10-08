@@ -1,13 +1,12 @@
 package BackPAN::Index::Create;
-$BackPAN::Index::Create::VERSION = '0.12';
+$BackPAN::Index::Create::VERSION = '0.13';
 use 5.006;
 use strict;
 use warnings;
 use Exporter::Lite;
 use Path::Iterator::Rule;
 use Scalar::Util            qw/ reftype /;
-use Module::Find            qw/ findsubmod /;
-use Module::Runtime         qw/ require_module /;
+use Module::Loader;
 use Carp;
 use autodie;
 
@@ -31,7 +30,9 @@ sub create_backpan_index
     my $author_dir       = "$basedir/authors";
     my $stem             = "$author_dir/id";
     my $releases_only    = $argref->{releases_only} || 0;
-    my @plugins          = findsubmod($PLUGIN_NAMESPACE);
+    my $loader           = Module::Loader->new()
+                           || croak "failed to instantiate Module::Loader\n";
+    my @plugins          = $loader->find_modules($PLUGIN_NAMESPACE);
     my @plugin_basenames = map { my $p = $_; $p =~ s/^.*:://; $p } @plugins;
     my $fh;
 
@@ -47,7 +48,7 @@ sub create_backpan_index
     }
     my $plugin_class = $PLUGIN_NAMESPACE.'::'.$basename;
 
-    require_module($plugin_class);
+    $loader->load($plugin_class);
 
     if (exists($argref->{output})) {
         open($fh, '>', $argref->{output});
